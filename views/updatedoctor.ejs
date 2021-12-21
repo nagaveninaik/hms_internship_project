@@ -1,0 +1,80 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>view doctor</title>
+	<!-- <link rel=“icon” type=“image/x-icon” href=“/image/call.ico”> -->
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css" />
+    
+</head>
+<body>
+	<%- include("common/header.ejs") %>
+    <%- include("common/nav.ejs") %>
+    <center>
+        <form action="/updatedoctor/<%=result[0].id%>" method="post">
+    <table border="2" class="table">
+        <tr>
+            <th>employee_id</th>
+            <td><%= result[0]._id %></td>
+        </tr>
+        <tr>
+            <th>name</th>
+            <td><input id="name" type="text" name="name" value="<%= result[0].name %>"></td>
+        </tr>
+        <tr>
+            <th>ph_no</th>
+            <td><input id="ph_no" type="phone" name="ph_no" value="<%= result[0].ph_no %>"></td>
+        </tr>
+        <tr>
+            <th>address</th>
+            <td> <input id="address" type="text" name="address" value="<%= result[0].address%>"></td>
+        </tr>
+        <tr>
+            <th>email</th>
+            <td><input id="email" type="email" name="email" value="<%= result[0].email%>"></td>
+        </tr>
+        <tr>
+            <th>salary</th>
+            <td><input id="salary" type="string" name="salary" value="<%= result[0].salary%>"></td>
+        </tr>
+        <tr>
+            <th>qualification</th>
+            <td> <input id="qualification" type="text" name="qualification" value="<%= result[0].qualification%>"></td>
+        </tr>
+        <tr>
+            <th>specialization</th>
+            <td> <input id="specialization" type="text" name="specialization" value="<%= result[0].specialization%>"></td>
+                 
+        </tr>
+        <tr>
+            <th>experience</th>
+            <td><input id="experience" type="string" name="experience" value="<%= result[0].experience%>"></td>
+                 
+        </tr>
+        <tr>
+            <th>dept_id</th>
+            <td><input id="dept_id" type="text" name="dept_id" value="<%= result[0].dept_id%>"></td>
+                  
+        </tr>
+    <tr>
+      <th>Submit</th>
+      <td><button type="submit" class="button">Submit</button></td>
+    </tr>
+        
+   </table>
+   
+   
+    </form>
+</center>
+    <%- include("common/footer.ejs") %>
+	
+	
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>view doctor</title>
+	<!-- <link rel=“icon” type=“image/x-icon” href=“/image/call.ico”> -->
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css" />
+    <style>
+
+body{
+    background-image: url("/image/home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+        
+        
+    </style>
+</head>
+<body>
+	<%- include("common/header.ejs") %>
+    <%- include("common/nav.ejs") %>
+<table border="2">
+    <tr>
+        <th>employee_id</th>
+        <th>name</th>
+        <th>ph_no</th>
+        <th>date_of_birth</th>
+        <th>gender</th>
+        <th>address</th>
+        <th>email</th>
+        <th>joining_date</th>
+        <th>salary</th>
+        <th>qualification</th>
+        <th>speciallization</th>
+        <th>experience</th>
+        <th>dept_id</th>
+        <th>changes</th>
+        
+        
+    </tr>
+    <% result.forEach((data)=>{ %>
+        <tr>
+            <td><%= data._id %></td>
+          <td><%= data.name %></td>
+          <td><%= data.ph_no %></td>
+          <td><%= data.date_of_birth %></td>
+          <td><%= data.gender%></td>
+          <td><%= data.address%></td>
+          <td><%= data.email%></td>
+          <td><%= data.joining_date%></td>
+          <td><%= data.salary%></td>
+          <td><%= data.qualification %></td>
+          <td><%= data.speciallization %></td>
+          <td><%= data.experience %></td>
+          <td><%= data.dept_id %></td>
+          <td><a href="/copy_doctor/<%= data._id%>">Print</a><br>
+         <a href="/editdoctor/<%= data._id%>"><img src="/image/edit.ico" alt="edit" width="40%" height="40%"></a><br>
+          <a href="/viewdoctor/<%= data._id%>" class="delete"><img src="/image/delete.ico" alt="delete"></a></td>
+          
+        
+        </tr>    
+    <% }) %> 
+    
+ 
+   </table>
+   <%- include("common/footer.ejs") %>
+	
+	
+</body>
+</html>

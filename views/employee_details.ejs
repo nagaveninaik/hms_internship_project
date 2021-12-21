@@ -1,0 +1,49 @@
+
+ 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>view employee</title>
+	<!-- <link rel=“icon” type=“image/x-icon” href=“/image/call.ico”> -->
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>
+	<%- include("common/header.ejs") %>
+<table border="2">
+    <tr>
+        <th>employee_id</th>
+        <th>name</th>
+        <th>ph_no</th>
+        <th>email</th>
+        <th>joining_date</th>
+        <th>role</th>
+        
+        
+    </tr>
+    <% result.forEach((data)=>{ %>
+        <tr>
+            <td><%= data._id %></td>
+          <td><%= data.name %></td>
+          <td><%= data.ph_no %></td>
+          <td><%= data.email%></td>
+          <td><%= data.joining_date%></td>
+          <td><%= data.role%></td>
+          
+        </tr>    
+    <% }) %> 
+    
+ 
+   <%- include("common/footer.ejs") %>
+	
+	
+</body>
+</html>

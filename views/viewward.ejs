@@ -1,0 +1,72 @@
+
+ 
+    
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     
+  
+
+
+
+   <a href="/updateward">Edit</a>
+ </body>
+ </html>
+
+
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>view wards</title>
+	<!-- <link rel=“icon” type=“image/x-icon” href=“/image/call.ico”> -->
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css" />
+
+</head>
+<body>
+	<%- include("common/header.ejs") %>
+    <%- include("common/nav.ejs") %>
+    
+     <table border="2">
+        <tr>
+            <th>ward_id</th>
+            <th>ward_name</th>
+            <th>ward_location</th>
+            <th>ward_status</th>
+            <th>ward_type</th>
+            <th>Delete</th>
+            
+        </tr>
+        <% result.forEach((data=>{ %>
+            <tr>
+              <td><%= data._id %></td>
+              <td><%= data.ward_name %></td>
+              <td><%= data.ward_location %></td>
+              <td><%= data.ward_status %></td>
+              <td><%= data.ward_type %></td>
+              
+              <td><a href="/viewward/<%= data._id%>"><img src="/image/delete.ico" alt="delete"></a></td>
+              
+            
+            </tr>    
+        <% })) %> 
+        
+     
+       </table>
+       <%- include("common/footer.ejs") %>
+	
+</body>
+</html>

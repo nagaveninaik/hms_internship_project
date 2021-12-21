@@ -1,0 +1,59 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Patient admission</title>
+
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" />
+
+</head>
+<body class="body">
+	<%- include("common/header.ejs") %>
+    <%- include("common/navbar.ejs") %>
+          <center>     
+            <div class="container">
+                <form action="/admission" method="post">
+                    
+                            
+                            <label for="patient_id">patient_id : </label><br>
+                            <input id="patient_id" type="text" name="patient_id" placeholder="enter patient_id" class="form-control">
+                        <br><br>
+                            <label for="ward_id">Ward_id : </label><br>
+                            <input id="ward_id" type="text" name="ward_id" placeholder="Enter ward_id" class="form-control">
+                        <br><br>
+                            <label for="doctor_id">Doctor_id: </label><br>
+                            <input id="doctor_id" type="text" name="doctor_id" placeholder="Enter doctor_id" class="form-control">
+                        <br><br>
+                            <label for="admission_date">admission_date</label><br>
+                            <input id="admission_date" type="date" name="admission_date" placeholder="yyyy-mm-dd" class="form-control">
+                            <br><br>
+                            <label for="discharge_date">discharge_date</label><br>
+                            <input id="discharge_date" type="date" name="discharge_date" placeholder="yyyy-mm-dd" class="form-control">
+                        <br><br>
+                            <label for="bill_amt">bill_amt</label><br>
+                            <input id="bill_amt" type="text" name="bill_amt" placeholder="enter bill amount" class="form-control">
+                       <br><br>
+                       <label for="status">Treatment status : </label><br>
+                                <select class="form-control" name="status" id="status">
+                                    <option value="Process">Process</option>
+                                    <option value="discharge">Discharge</option>
+                                    
+                                 </select>
+                                 <br><br>
+                    <button type="submit" class="button">Submit</button>
+                    <button type="reset" class="button">Clear</button>
+                </form>
+            </div>
+                </center>
+            </div>
+            <%- include("common/footer.ejs") %>
+	
+	
+</body>
+</html>

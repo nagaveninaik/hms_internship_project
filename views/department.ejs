@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin dashboard</title>
+	<!-- <link rel=“icon” type=“image/x-icon” href=“/image/call.ico”> -->
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css" />
+    
+</head>
+<body>
+	<%- include("common/header.ejs") %>
+    <%- include("common/nav.ejs") %>
+            <center>
+               
+                <div class="container">
+                    <form action="/department" method="POST">
+                                <label for="dept_name">dept_name : </label><br>
+                                <select name="dept_name" id="dept_name" class="form-control">
+                                    <option value="Addmision">Addmision</option>
+                                    <option value="Medical">Medical</option>
+                                    <option value="Nursing">Nursing</option>
+                                    <option value="Paramedical">Paramedical</option>
+                                    <option value="Physical medicine and rehability">Physical medicine and rehability</option>
+                                    <option value="Pharmacy">Pharamacy</option>
+                                    <option value="Radiology">Radiology</option>
+                                    <option value="Dietary">Dietary</option>
+                                    <option value="Medical Record">Medical Record</option>
+                                    <option value="Security">Security</option>
+                                    <option value="Cleaning">Cleaning</option>
+                                    <option value="Mess">Mess</option>
+                                 </select><br><br>
+                                    
+                                <label for="start_date">start_date</label><br>
+                                <input id="start_date" type="date" name="start_date" placeholder="yyyy-mm-dd" class="form-control">
+                            
+            <br>
+                           <br> 
+                        <input type="submit" value="submit" class="button">
+                        <input type="reset" value="clear" class="button">
+                        <br>
+                    </form>
+            
+            </div>
+            </center>
+       <%- include("common/footer.ejs") %>
+	
+	
+</body>
+</html>

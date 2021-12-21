@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Department Database</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+    
+        
+        .container {
+            margin: 10px auto;
+            width: 450px;
+            /* border: 2px solid black; */
+            text-align: center;
+        }
+        
+        form {
+            padding: 60px 50px;
+        }
+        
+        #sem {
+            padding-right: 200px;
+            padding-top: 5px;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            color:chartreuse;
+        }
+        
+        input {
+            padding: 10px 56px;
+        }
+        select{
+            padding: 10px 40px;
+        }
+        button {
+            width:45%;
+            background-color: rgb(37, 205, 211);
+            margin-top: 10px;
+            padding: 7px 5px;
+            border-radius: 16%;
+        }
+        ul li{
+            color:blue;
+        }
+        input,select{
+            width:100%;
+        }
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html, body{
+    height: 100%;
+    background-image: url("dept.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+nav{
+    width: 250px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, .5);
+}
+nav ul {
+    position: relative;
+    list-style-type: none;
+}
+nav ul li a{
+    display: flex;
+    align-items: center;
+    font-family: arial;
+    font-size: 1.15em;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+    padding: 10px 30px;
+    height: 50px;
+    transition: .5s ease;
+    border-radius: 0 30px;
+}
+nav ul li a:hover {
+    background: rgba(218, 55, 55, 0.7);
+    color: #fff;
+}
+nav ul ul{
+    position: absolute;
+    left: 250px;
+    width: 200px;
+    top:0;
+    display: none;
+    background: rgba(39, 176, 80, 0.4);
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0 ,.1);
+}
+nav ul span{
+    position: absolute;
+    right: 20px;
+    font-size: 1.5em;
+}
+nav ul .dropdown {
+    position: relative;
+}
+nav ul .dropdown:hover ul {
+    display: initial;
+}
+
+button{
+    background-color: rgb(17, 219, 108);
+    border-radius: 23px;;
+}
+       
+    </style>
+    
+</head>
+
+<body>
+    <h1> Department Database</h1>
+    <br>
+    
+    <h1>Add  Department</h1>
+    <div class="container">
+
+        <table border="2">
+            <tr>
+                <th>dept_id</th>
+                <th>dept_name</th>
+                <th>start_date</th>
+                
+            </tr>
+            <% result.forEach((data=>{ %>
+                <tr>
+                  <td><%= data._id %></td>
+                  <td><%= data.dept_name %></td>
+                  <td><%= data.start_date %></td>
+                
+                </tr>    
+            <% })) %> 
+            
+         
+           </table>
+        
+
+        <form action="/updatedepartment" method="POST">
+            <table class="table">
+                <tr>
+                    <th><label for="dept_id">dept_id</label></th>
+                    <td><input type="text" id="dept_id" name="dept_id" placeholder="enter department id"></td>
+                </tr>
+               <br><br>
+                <tr>
+                    <th><label for="dept_name">dept_name</label></th>
+                    <td><select name="dept_name" id="dept_name">
+                        <option value="Addmision">Addmision</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Nursing">Nursing</option>
+                        <option value="Paramedical">Paramedical</option>
+                        <option value="Physical medicine and rehability">Physical medicine and rehability</option>
+                        <option value="Pharmacy">Pharamacy</option>
+                        <option value="Radiology">Radiology</option>
+                        <option value="Dietary">Dietary</option>
+                        <option value="Medical Record">Medical Record</option>
+                        <option value="Security">Security</option>
+                        <option value="Cleaning">Cleaning</option>
+                        <option value="Mess">Mess</option>
+                        <option value="other"><input type="text"></option>
+                     </select>
+                        
+                     </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th><label for="start_date">start_date</label></th>
+                    <td><input id="start_date" type="date" name="start_date" placeholder="yyyy-mm-dd"></td>
+                </tr>
+
+               <br> 
+                
+            </table>
+            <button type="submit">Submit</button>
+            
+            <button type="reset">clear</button>
+        </form>
+    </div>
+
+</body>
+
+
+</html>

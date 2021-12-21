@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>view admission</title>
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css" />
+    <style>
+        #body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+    
+}
+#body:hover{
+    animation: none;
+}
+    </style>
+</head>
+<body id="body">
+	
+    <center>
+        <img src="/heart.ico" alt="save life logo" width="85px" height="85px" style="padding-top: 5%;">
+                                <h2 id="name">SAVELIFE</h2>
+    <table border="2" class="copy">
+		<tr>
+			<th>ward_id</th>
+			<td><%= result[0].ward_id%></td>
+		</tr>
+		<tr>
+			<th>doctor_id</th>
+			<td><%= result[0].doctor_id%></td>
+		</tr>
+		<tr>
+			<th>discharge_date</th>
+			<td><%= result[0].discharge_date %></td>
+		</tr>
+		<tr>
+			<th>bill_amt</th>
+			<td><%= result[0].bill_amt %></td>
+		</tr>
+		<tr>
+			<th>Status</th>
+			<td><%= result[0].status %></td>
+		</tr>
+		
+    
+   </table>
+   <br>
+   <button onclick="window.print()" class="button">Print this page</button>
+</center>
+   
+</body>
+</html>
+

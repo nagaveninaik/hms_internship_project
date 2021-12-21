@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Ward Database</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+h1{
+    
+    text-align:center;
+    font-size: 60px;
+    color:purple;
+}
+html, body{
+    height: 100%;
+    background-image: url("ward1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+nav{
+    width: 250px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, .5);
+}
+nav ul {
+    position: relative;
+    list-style-type: none;
+}
+nav ul li a{
+    display: flex;
+    align-items: center;
+    font-family: arial;
+    font-size: 1.15em;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+    padding: 10px 30px;
+    height: 50px;
+    transition: .5s ease;
+    border-radius: 0 30px;
+}
+nav ul li a:hover {
+    background: rgba(0, 0, 0 ,0.7);
+    color: #fff;
+}
+nav ul ul{
+    position: absolute;
+    left: 250px;
+    width: 200px;
+    top:0;
+    display: none;
+    background: rgba(155, 39, 176,.4);
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0 ,.1);
+}
+nav ul span{
+    position: absolute;
+    right: 20px;
+    font-size: 1.5em;
+}
+nav ul .dropdown {
+    position: relative;
+}
+nav ul .dropdown:hover ul {
+    display: initial;
+}
+
+button{
+    background-color: lightslategray;
+    border-radius: 23px;
+    padding: 20px 20px;
+}
+        
+        .container {
+            margin: 10px auto;
+            width: 450px;
+            /* border: 2px solid black; */
+            text-align: center;
+        }
+        
+        form {
+            padding: 60px 50px;
+        }
+        
+        #sem {
+            padding-right: 200px;
+            padding-top: 5px;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        input,select {
+            padding: 10px 56px;
+            width:100%;
+        }
+        select{
+            padding: 10px 40px;
+        }
+        button {
+            background-color: rgb(37, 205, 211);
+            margin-top: 10px;
+            padding: 10px 35px;
+            border-radius: 8px;
+        }
+        ul li{
+            color:blue;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>Welcome to Ward Database</h1>
+    <br>
+    <nav>
+        <br>
+        <ul>
+            <br><br>
+            <li class="dropdown"><a href="#">Employee_details<span>&rsaquo;</span></a>
+                <ul>
+                    <li><a href="addemployee.html">Add</a></li>
+                    <li><a href="view_employee.php">View</a></li>
+                </ul>
+            </li>
+            <br>
+            <li class="dropdown"><a href="#">Department<span>&rsaquo;</span></a>
+                <ul>
+                    <li><a href="department.html">Add</a></li>
+                    <li><a href="view_department.php">View</a></li>
+                </ul>
+            </li>
+            <br>
+            <li class="dropdown"><a href="">Ward<span>&rsaquo;</span></a>
+                <ul>
+                    <li><a href="ward.html">Add</a></li>
+                    <li><a href="view_ward.php">View</a></li>
+                   
+                </ul>
+            </li>
+            <br>
+            <li class="dropdown"><a href="">Hod_details<span>&rsaquo;</span></a>
+                <ul>
+                    <li><a href="addhod.html">Add</a></li>
+                    <li><a href="view_hod.php">View</a></li>
+                   
+                </ul>
+            </li>
+    </nav>
+    <h1>Add  WARD</h1>
+    <div class="container">
+        <table border="2">
+            <tr>
+                <th>ward_id</th>
+                <th>ward_name</th>
+                <th>ward_location</th>
+                <th>ward_status</th>
+                <th>ward_type</th>
+                
+            </tr>
+            <% result.forEach((data=>{ %>
+                <tr>
+                  <td><%= data._id %></td>
+                  <td><%= data.ward_name %></td>
+                  <td><%= data.ward_location %></td>
+                  <td><%= data.ward_status %></td>
+                  <td><%= data.ward_type %></td>
+                  
+                
+                </tr>    
+            <% })) %> 
+            
+         
+           </table>
+        <form action="/updateward" method="POST">
+            <table class="table">
+                <tr>
+                    <th><label for="ward_id">ward_id</label></th>
+                    <td><input id="ward_id" type="text" name="ward_id" placeholder="enter ward_id"></td>
+                </tr>
+                <tr></tr>
+               <br><br>
+                <tr>
+                    <th><label for="ward_name">ward_name</label></th>
+                    <td><select name="ward_name" id="ward_name">
+                        <option value="w1">w1</option>
+                        <option value="w2">w2</option>
+                        <option value="w3">w3</option>
+                        <option value="w4">w4</option>
+                        <option value="w5">w5</option>
+                        <option value="w6">w6</option>
+                        <option value="w7">w7</option>
+                        <option value="w8">w8</option>
+                        <option value="w9">w9</option>
+                        <option value="w10">w10</option>
+                        
+                     </select>
+                        
+                     </td>
+                </tr>
+                <tr></tr>
+                <tr>
+                    <th><label for='ward_location'>ward_location</label></th>
+                    <td><select name='ward_location' id='ward_location'>
+                        <option value="GF">GF</option>
+                        <option value="1F">1F</option>
+                        <option value="2F">2F</option>
+                        <option value="3F">3F</option>
+                        <option value="4F">4F</option>
+                        <option value="5F">5F</option>
+                        <option value="6F">6F</option>
+                        <option value="7F">7F</option>
+                        <option value="8F">8F</option>
+                    </select></td>              
+                  </tr>
+                  <tr></tr>
+                  <tr>
+                    <th><label for="ward_type">ward_type</label></th>
+                    <td><select name="ward_type" id="ward_type">
+                        <option value="General">General</option>
+                        <option value="Luxury">Luxury</option>
+                        <option value="Semi_luxury">Semi_luxury</option>
+                        <option value="Emergency">emergency</option>
+                    </td>
+                </tr>
+                <tr></tr>
+                  <tr>
+                      <th><label for="ward_status">ward_status</label></th>
+                      <td><select name='ward_status' id='ward_status'>
+                          <option value="Full">Full</option>
+                          <option value="Empty">Empty</option>
+                      </select></td>
+                  </tr>
+                  <tr></tr>
+                  <tr>
+                      <th><label for="ward_capacity">ward_capacity</label></th>
+                      <td><select name='ward_capacity' id='ward_capacity'>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="5">5</option>
+                    </select></td>
+                  </tr>
+                  <tr></tr>
+                  <tr>
+                    <th><label for="ward_filled">ward_filled</label></th>
+                    <td><input name="ward_filled" id="ward_filled" type="text" placeholder="no need to enter"></td>
+                </tr>
+                  
+                
+            </table>
+            <button type="submit">Submit</button>
+            <button type="reset">clear</button>
+        </form>
+    </div>
+
+    
+   
+<center><a href="/index"><button >Back to Home Page</button></a></center>
+</body>
+
+
+</html>

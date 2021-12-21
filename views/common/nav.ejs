@@ -1,0 +1,61 @@
+
+    <div class="sidenav">
+        <button class="dropdown-btn">Employee
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="/employee">Add</a>
+            <a href="/viewemployee">View</a>
+          </div>
+          <br><br>
+          <button class="dropdown-btn">Department
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="/department">Add</a>
+            <a href="/viewdepartment">View</a>
+          </div>
+          <br><br>
+          <button class="dropdown-btn">Ward
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="/ward">Add</a>
+            <a href="/viewward">View</a>
+          </div>
+          <br><br>
+          <button class="dropdown-btn">HOD
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="/hod">Add</a>
+            <a href="/viewhod">View</a>
+          </div>
+          <br><br>
+          <button class="dropdown-btn">Doctor
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="/doctor">Add</a>
+            <a href="/viewdoctor">View</a>
+          </div>
+          
+      </div>
+
+      <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+          } else {
+          dropdownContent.style.display = "block";
+          }
+          });
+        }
+</script>

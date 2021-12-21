@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>update patient</title>
+	<!-- <link rel=“icon” type=“image/x-icon” href=“/image/call.ico”> -->
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css" />
+    <style>
+
+body{
+    background-image: url("/image/home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+        
+        
+    </style>
+</head>
+<body>
+	<%- include("common/header.ejs") %>
+	<%- include("common/.ejs")navbar %>
+	<center>
+    <form action="/updateadmission/<%=result[0].id%>" method="post">
+
+    <table border="2">
+		<tr>
+			<th>ward_id</th>
+			<td><input id="ward_id" type="text" name="ward_id" value="<%= result[0].ward_id%>"></td>
+		</tr>
+		<tr>
+			<th>doctor_id</th>
+			<td><input id="doctor_id" type="text" name="doctor_id" value="<%= result[0].doctor_id%>"></td>
+		</tr>
+		<tr>
+			<th>discharge_date</th>
+			<td><input id="discharge_date" type="date" name="discharge_date" value="<%= result[0].discharge_date %>"></td>
+		</tr>
+		<tr>
+			<th>bill_amt</th>
+			<td><input id="bill_amt" type="text" name="bill_amt" value="<%= result[0].bill_amt %>"></td>
+		</tr>
+		<tr>
+			<th>Status</th>
+			<td><input id="status" type="text" name="status" value="<%= result[0].status %>"></td>
+		</tr>
+		<tr>
+			<th>Submit</th>
+			<td><input type="submit" value="submit"></td>
+		</tr>
+    
+   </table><br><br>
+   
+   
+    </form>
+</center>
+	<%- include("common/footer.ejs") %>
+	
+	
+</body>
+</html>

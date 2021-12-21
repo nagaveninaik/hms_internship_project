@@ -1,0 +1,86 @@
+
+ 
+    
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     
+  
+
+
+ </body>
+ </html>
+
+
+
+ 
+ 
+    
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+     
+  
+
+
+
+   <a href="/updateward">Edit</a>
+ </body>
+ </html>
+
+
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>view hod details</title>
+	<!-- <link rel=“icon” type=“image/x-icon” href=“/image/call.ico”> -->
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css" />
+    
+</head>
+<body>
+	<%- include("common/header.ejs") %>
+    
+     <table border="2">
+        <tr>
+            <th>hod_id</th>
+            <th>dept_id</th>
+            <th>start_date</th>
+            
+        </tr>
+        <% result.forEach((data=>{ %>
+            <tr>
+              <td><%= data.hod_id %></td>
+              <td><%= data.dept_id %></td>
+              <td><%= data.start_date %></td>
+              
+            </tr>    
+        <% })) %> 
+        
+     
+       </table>
+       <%- include("common/footer.ejs") %>
+	
+	
+</body>
+</html>

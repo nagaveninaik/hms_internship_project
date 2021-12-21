@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>view admission</title>
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<%- include("common/header.ejs") %>
+	<%- include("common/navbar.ejs") %>
+    
+<table border="2">
+    <tr>
+        <th>patient_id</th>
+        <th>ward_id</th>
+        <th>doctor_id</th>
+        <th>admission_date</th>
+        <th>discharge_date</th>
+        <th>bill_amt</th>
+		<th>Status</th>
+		<th>Print</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        
+    </tr>
+    <% result.forEach((data)=>{ %>
+        <tr>
+            <td><%= data.patient_id %></td>
+            <td><%= data.ward_id %></td>
+            <td><%= data.doctor_id %></td>
+            <td><%= data.admission_date %></td>
+            <td><%= data.discharge_date %></td>
+            <td><%= data.bill_amt %></td>
+			<td><%= data.status %></td>
+			<td><a href="/copy_admission/<%= data._id%>">print</a></td>
+         <td><a href="/editadmission/<%= data._id%>"><img src="/image/edit.ico" alt="edit" width="40%" height="40%"></a></td>
+         <td><a href="/viewadmission/<%= data._id%>" class="delete"><img src="/image/delete.ico" alt="delete"></a></td>
+         
+        </tr> 
+    <% }) %> 
+    
+ 
+   </table>
+   <%- include("common/footer.ejs") %>
+</body>
+</html>
+

@@ -1,0 +1,72 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>update patient</title>
+	<!-- <link rel=“icon” type=“image/x-icon” href=“/image/call.ico”> -->
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css" />
+    <style>
+
+body{
+    background-image: url("/image/home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+        
+        
+    </style>
+</head>
+<body>
+	<%- include("common/header.ejs") %>
+    <%- include("common/navbar.ejs") %>
+    <center>
+    <form action="/updatepatient/<%=result[0].id%>" method="post">
+
+    <table border="2" class="table">
+    <tr>
+        <th>patient_id</th>
+        <td><%= result[0]._id %></td>
+    </tr>
+    <tr>
+        <th>name</th>
+        <td><input id="name" type="text" name="name" value="<%= result[0].name %>"></td>
+    </tr>
+    <tr>
+        <th>ph_no</th>
+        <td><input id="ph_no" type="phone" name="ph_no" value="<%= result[0].ph_no %>"></td>
+    </tr>
+    <tr>
+        <th>email</th>
+        <td><input id="email" type="email" name="email" value="<%= result[0].email%>"></td>
+    </tr>
+    <tr>
+        <th>address</th>
+        <td> <input id="address" type="text" name="address" value="<%= result[0].address%>"></td>
+    </tr>
+    <tr>
+        <th>blood_group</th>
+        <td> <input id="blood_group" type="text" name="blood_group" value="<%= result[0].blood_group%>"></td>
+    </tr>
+    <tr>
+        <th>Submit</th>
+        <td><input type="submit" value="submit" class="button"></td>
+    </tr>
+            
+   </table><br><br>
+    </form>
+</center>
+    <%- include("common/footer.ejs") %>
+	
+	
+</body>
+</html>

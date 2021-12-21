@@ -1,0 +1,69 @@
+ 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>view employee</title>
+	<!-- <link rel=“icon” type=“image/x-icon” href=“/image/call.ico”> -->
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css" />
+    <style>
+        #body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+    
+}
+#body:hover{
+    animation: none;
+}
+    </style>
+</head>
+<body id="body">
+	
+    <center>
+        <img src="/heart.ico" alt="save life logo" width="85px" height="85px" style="padding-top: 5%;">
+        <h2 id="name">SAVELIFE</h2>
+    <table border="2" class="copy">
+        <tr>
+            <th>employee_id</th>
+            <td><%= result[0]._id %></td>
+        </tr>
+        <tr>
+            <th>name</th>
+            <td><%= result[0].name %></td>
+        </tr>
+        <tr>
+            <th>ph_no</th>
+            <td><%= result[0].ph_no %></td>
+        </tr>
+        <tr>
+            <th>address</th>
+            <td><%= result[0].address%></td>
+        </tr>
+        <tr>
+            <th>email</th>
+            <td><%= result[0].email%></td>
+        </tr>
+        <tr>
+            <th>salary</th>
+            <td><%= result[0].salary%></td>
+        </tr>
+    
+      
+   </table>
+   
+   
+    </form><br>
+    <button onclick="window.print()" class="button">Print this page</button>
+</center>
+	
+</body>
+</html>

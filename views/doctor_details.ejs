@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>view doctor</title>
+	
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" />
+    
+</head>
+<body>
+	<%- include("common/header.ejs") %>
+    <center>
+<table border="2">
+    <tr>
+        <th>doctor_id</th>
+        <th>name</th>
+        <th>qualification</th>
+        <th>speciallization</th>
+        <th>experience</th>
+        <th>dept_id</th>
+        
+        
+    </tr>
+    <% result.forEach((data)=>{ %>
+        <tr>
+          <td><%= data._id %></td>
+          <td><%= data.name %></td>
+          <td><%= data.qualification %></td>
+          <td><%= data.speciallization %></td>
+          <td><%= data.experience %></td>
+          <td><%= data.dept_id %></td>
+          
+        
+        </tr>    
+    <% }) %> 
+    
+</table>
+    </center>
+  <%- include("common/footer.ejs") %>
+	
+	
+</body>
+</html>

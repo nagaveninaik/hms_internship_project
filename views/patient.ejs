@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Add employee</title>
+
+	<link rel="icon" href="/heart.ico" type="image/icon type">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" />
+
+</head>
+<body class="body">
+	<%- include("common/header.ejs") %>
+    <%- include("common/navbar.ejs") %>
+          <center>     
+                <div class="container">
+                    <form action="/patient" method="post">
+                        
+                            <label for="name">name : </label><br>
+                            <input id="name" type="text" name="name" class="form-control" placeholder="enter name ">
+                            <br>
+                           <br>
+                                
+                            <label for="ph_no">ph_no : </label><br>
+                            <input id="ph_no" type="phone" name="ph_no" class="form-control" placeholder="Enter phone no.">
+                            <br><br>
+                            <label for="email">email : </label><br>
+                            <input id="email" type="email" class="form-control" name="email" placeholder="Enter email">
+                            
+                            <br>
+                            <br>
+                            <label for="date_of_birth">date_of_birth : </label><br>
+                            <input id="date_of_birth" type="date" name="date_of_birth" class="form-control" placeholder="yyyy-mm-dd">
+                            <br><br>
+                            
+                            <label for="gender">gender : </label><br>
+                                <select class="form-control" name="gender" id="gender">
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Others">Others</option>
+                                 </select>
+                                 
+                           
+                                
+                            <br><br>
+                                 <label for="address">address : </label><br>
+                                <input id=address class="form-control" type="text" name="address" placeholder="placename,city,state">
+                                
+                            <br><br>
+                                <label for="blood_group">blood_group : </label><br>
+                        <select name="blood_group" class="form-control" id="blood_group">
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                         </select>
+                                 <br>
+                                 <br>
+                                 <input type="submit" value="submit" class="button">
+                                 <input type="reset" value="clear" class="button">
+                    </form>
+                </div>
+                </center>
+            </div>
+            <%- include("common/footer.ejs") %>
+	
+	
+</body>
+</html>
