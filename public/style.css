@@ -1,0 +1,426 @@
+
+    body{
+		margin: 0%;
+		padding:0%;
+		background-image: url("/image/h5.jpg");
+        background-size: cover;
+        animation: bgimage 15s infinite;
+		
+	}
+	@keyframes bgimage{
+		0% {background-image: url("/image/h1.jpg");background-size: cover;}
+		15% {background-image: url("/image/h2.jpg");background-size: cover;}
+		30% {background-image: url("/image/h3.jpg");background-size: cover;}
+		45% {background-image: url("/image/h4.jpg");background-size: cover;}
+		70% {background-image: url("/image/h5.jpg");background-size: cover;}
+		85% {background-image: url("/image/h6.jpg");background-size: cover;}
+		100% {background-image: url("/image/h1.jpg");background-size: cover;}
+	}
+    body:hover{
+        
+        animation: none;
+    }
+        
+    .container{
+        width: 20%;
+        border: 2px solid black;
+        background-color: rgb(243, 213, 130);
+        box-shadow: 3px 3px 3px blanchedalmond;
+        margin: 10%;
+        border-radius: 25%;
+        padding: 1%;
+    }
+    .form-control{
+        width:60%;
+        
+        background-color: black;
+        color:white;
+        border-radius: 30%;
+    }
+    .form-control:focus{
+        border-radius: 5px;
+        font-family: serif;
+        background-color: white;
+        color:black;
+    
+        
+    }
+    .history{
+        margin: 12%;
+        border: 1px solid black;
+        background-color: rgb(243, 232, 215);
+        padding: 2%;
+        font-size: 20px;
+        color:rgb(16, 15, 17);
+        text-shadow:2px 2px 4px rgb(236, 219, 215);
+        width: 80%; 
+        
+        
+    }
+
+    .about{
+        margin: 10%;
+        border: 2px solid black;
+        background-color: white;
+        padding: 2%;
+        font-size: 90%;
+        color:rgb(59, 29, 168);
+        text-shadow:2px 2px 4px tomato;
+        width: 40%; 
+    }
+
+.heading{
+    display: flex;
+    width:100%;
+    height: 100%;
+    
+}
+a.active{
+    background-color: turquoise;
+    color:tomato;
+    
+}
+#logo{
+    width: 15%;
+    background-color:rgb(192, 149, 68);
+    position: fixed;
+    top: 0;
+    
+    
+}
+#navbar{
+    width:85%;
+    background-color: rgb(173, 145, 68);
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+    
+}
+
+.nav-item{
+    display: flex;
+}
+#name{
+    color:rgb(64, 22, 163);
+    text-shadow: 4px 3px 4px rgb(235, 230, 230);
+}
+#contactno{
+    
+    color:red;
+    text-align: right;
+}
+h2{
+    color:rgb(15, 27, 199);
+    text-shadow: 2px 2px 2px rgb(238, 238, 241);
+}
+.nav-item a:link{
+    border:1px solid white;
+    border-collapse: collapse;
+    background-color: rgb(120, 70, 167);
+    padding:1% 5.9%;
+    text-decoration: none;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-weight: bolder;
+}
+.nav-item a:hover{
+    color:blue;
+    background-color: rgb(110, 197, 60);
+}
+
+
+.footer{
+    background-color: rgb(192, 162, 65);
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    padding: 0.5%;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    z-index: 2;
+}
+
+/* .nav{
+    width: 250px;
+    position: absolute;
+    top: 4%;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: rgb(180, 154, 6);
+    box-shadow: 5px 7px 10px rgba(0, 0, 0, .5);
+}
+.nav .ul {
+    position: relative;
+    list-style-type: none;
+}
+.nav .ul li a{
+    display: flex;
+    align-items: center;
+    font-family: arial;
+    font-size: 1.15em;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+    padding: 10px 30px;
+    height: 50px;
+    transition: .5s ease;
+    border-radius: 0 30px;
+}
+.nav .ul li a:hover {
+    background: rgba(0, 0, 0 ,0.7);
+    color: #fff;
+}
+.nav .ul ul{
+    position: absolute;
+    left: 100px;
+    width: 200px;
+    top:0;
+    display: none;
+    background: rgba(229, 196, 235, 0.4);
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0 ,.1);
+}
+.nav .ul span{
+    position: absolute;
+    right: 20px;
+    font-size: 1.5em;
+}
+.nav .ul .dropdown {
+    position: relative;
+}
+.nav .ul .dropdown:hover ul {
+    display: initial;
+} */
+
+.form-control{
+    width:60%;
+    
+    background-color: black;
+    color:white;
+    border-radius: 30%;
+}
+.form-control:focus{
+    border-radius: 5px;
+    font-family: serif;
+    background-color: white;
+    color:black;
+
+    
+}
+.button{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1.5%;
+    box-shadow: 2px 2px 2px red;
+}
+/* 
+
+.body{
+    background-image: url("/image/home.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+} */
+/* .container{
+    width: 20%;
+    border: 2px solid black;
+    background-color: rgb(243, 213, 130);
+    box-shadow: 3px 3px 3px blanchedalmond;
+    margin: 15%;
+    border-radius: 25%;
+    padding: 0.5%;
+} */
+
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin:17%;
+    padding: 1%;
+    width:80%;
+   
+}
+.table input{
+    width:70%;
+}
+
+.table{
+    border: 4px solid black;
+    border-collapse: collapse;
+    margin:17%;
+    padding: 1%;
+    width: 50%;
+    border-radius: 10%;
+}
+table th{
+    background-color: rgb(45, 45, 216);
+    color:white;
+    text-align: center;
+    padding: 1%;
+    position: sticky;
+    top: 18%;
+}
+table td{
+    padding: 1%;
+    
+}
+table tr:nth-child(even){
+    background-color: rgb(229, 214, 194);
+}
+table tr:nth-child(odd){
+    background-color:rgb(152, 199, 201);
+}
+table tr:hover{
+    background-color: darkkhaki;
+    color:darkred;
+}
+
+
+.delete{
+    box-shadow: 1px 1px 1px rgb(101, 101, 187);
+}
+#edit{
+    float:right;
+    margin-top: 10%;
+    background-color: rgb(125, 228, 125);
+    box-shadow: 3px 3px 3px blue;
+    border-radius: 10%;
+}
+
+/* details dropdown style property */
+.dropbtn {
+    background-color: rgb(120, 70, 167);
+    color:rgb(60, 24, 100);
+    font-weight: bolder;
+    padding:15px 86px;
+    border:2px solid rgb(5, 5, 5);
+    border-collapse: collapse;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  /* Fixed sidenav, full height */
+  .sidenav {
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 8%;
+    top: 0;
+    left: 0;
+    background-color: rgba(223, 153, 72, 0.822);
+    overflow-x: hidden;
+    padding-top: 20px;
+    
+  }
+  
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color:darkblue;
+    text-shadow: 2px 2px 2px rgb(224, 31, 31);
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .sidenav a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Main content */
+  .main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-size: 20px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: green;
+    color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #8a5555;
+    padding-left: 8px;
+    
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+  
+  /* Some media queries for responsiveness */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+
+  
+.copy{
+    border:1px solid black;
+    border-collapse: collapse;
+    background-color: white;
+    
+    margin: 0%;
+    width: 40%
+}
+.copy td{
+    background-color: white;
+    border:1px solid black;
+    padding: 4%;
+}
+.copy th{
+    background-color: white;
+    border:1px solid black;
+    padding:5px;
+    color:black;
+}
+
